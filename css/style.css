@@ -15,11 +15,17 @@ body{
     background: url(../img/menu.png);
     background-size: 100%;
 }
+.navbar_logo_name {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.2;
+}
 #main-nav{
     background-color:rgb(70, 143, 6);
     padding:20px 200px;
     z-index:100;
     width:100%;
+    transition:all 0.7s;
 }
 
 #main-nav li{
@@ -38,3 +44,10 @@ body{
     border-bottom: 3px solid rgb(176, 242, 118) !important;
     transition: all 1s;
 }
+@media (max-width: 991px) {
+    #main-nav {
+      padding: 15px;
+    }
+    .navbar_logo_name {
+      font-size: 14px;
+    }
