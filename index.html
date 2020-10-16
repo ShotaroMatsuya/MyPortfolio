@@ -21,6 +21,9 @@
 
 <body data-spy="scroll" data-target="#main-nav" id="home">
     <!-- LOADER -->
+    <div class="loader">
+        <div class="inner"></div>
+    </div>
     
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-sm fixed-top" id="main-nav">
@@ -53,15 +56,29 @@
 
 
     <!-- SLIDER  -->
-        
-        <div id="slides">
-            <div class="overlay"></div>
-            <div class="slides-container">
-              <img src="img/image1.jpg" alt="">
-              <img src="img/image2.jpg" alt="">
-              <img src="img/image3.jpg" alt="">
+
+    <div id="slides">
+        <div class="overlay"></div>
+        <ul class="slides-container">
+          <li>
+            <img src="img/image1.jpg" alt="">
+            <div class="container">
+              Slide one
             </div>
-          </div>
+          </li>
+          <li>
+            <img src="img/image2.jpg" alt="">
+            <div class="container">
+              Slide two
+            </div>
+          </li>
+          <li>
+            <img src="img/image3.jpg" alt="">
+            <div class="container">
+              Slide three
+            </div>
+          </li>
+        </ul>
         <div class="titleMessage">
             <div class="heading">
                 <p class="main">Shotaro Matsuya</p>
@@ -69,10 +86,10 @@
             </div>
         </div>
         <nav class="slides-navigation">
-            <a href="#" class="next"></a>
-            <a href="#" class="prev"></a>
+          <a href="#" class="next"></a>
+          <a href="#" class="prev"></a>
         </nav>
-    </div>
+      </div>
     
 
 
@@ -89,7 +106,7 @@
     </footer>
 
     <script src="js/jquery.superslides.min.js"></script>
-
+    <script src="js/typed.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
     </script>
