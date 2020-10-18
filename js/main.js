@@ -21,7 +21,7 @@ $(document).ready(function(){
         pagination:false
     });
     var typed = new Typed(".typed",{
-        strings:["Web Developer.","Student.","Creative Design.","Doctor."],
+        strings:["Web Developer.","Student.","Creative Design.","Challenger."],
         typeSpeed:70,
         loop:true,
         startDelay:1000,
