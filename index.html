@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/superslides.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
@@ -47,7 +47,7 @@
                         <a href="#portfolio" class="nav-link">WORK</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#activity" class="nav-link">ACTIVITY</a>
+                        <a href="#stats" class="nav-link">ACTIVITY</a>
                     </li>
                     <li class="nav-item">
                         <a href="#contact" class="nav-link">CONTACT</a>
@@ -97,7 +97,7 @@
 <!-- ABOUT ME -->
 
 
-  <header id="about" class="mt-5">
+  <header id="about" class="mt-5 pt-5">
     <div class="container">
   
     <div class="row no-gutters">
@@ -151,7 +151,7 @@
 </div>
   </header>
   <!-- Skill -->
-  <div id="skill" class="collapse">
+  <div id="skill" class="collapse mb-5">
     <div class="container">
     <div class="card card-body bg-primary text-white py-5">
       <h3>My Skills</h3>
@@ -213,7 +213,7 @@
       </div>
   </div>
   <!-- 経歴 -->
-  <div id="resume" class="collapse">
+  <div id="resume" class="collapse mb-5">
     <div class="container">
     <div class="card card-body bg-success text-white py-5">
       <h2>My Resume</h2>
@@ -283,7 +283,7 @@
   </div>
 
   <!-- 趣味 -->
-  <div id="hobby" class="collapse">
+  <div id="hobby" class="collapse mb-5">
     <div class="container">
     <div class="card card-body bg-warning text-white py-5">
       <h2>My hobby</h2>
@@ -393,9 +393,21 @@
     </div>
   </div>
 </div>
-
+  <!-- COntact section -->
+  <section id="contact" class="my-5 py-5">
+    <div class="container-fluid">
+      <div class="dark-overlay">
+      <div class="col p-5">
+        <a href="mailTo:matsuya@h01.itscom.net">
+              <i class="fas fa-envelope-open fa-3x"></i></a>
+            <h2 class="mt-3">Contact Me!</h1>
+      </div>
+    </div>
+  </div>
+  </section>
+  
   <!-- stats -->
-  <div id="stats" class="statsSection section my-5s">
+  <div id="stats" class="statsSection section my-5 py-5">
     <div class="container">
         <div class="row">
           
@@ -447,8 +459,31 @@
 
     </div>
 </div>
+  <!-- ACTIVITY -->
+  <div id="activity" class="my-5">
+  
+
+      
+        <div class="heading text-center">
+          <h1>Latest from Social</h1>
+      </div>
+      <main class="main">
+      
+      
+        <section class="tweets-area  owl-carousel owl-theme">
+          
+          
+        </section>
+      </main>
+
+   
+  
+  
+  
+  
+  </div>
 <!-- PORTFOLIO -->
-<div id="portfolio" class="section my-5">
+<div id="portfolio" class="section my-5 py-5">
   <div class="container">
       <div class="row">
           <div class="heading">
@@ -590,57 +625,13 @@
               </ul>
           </div>
       </div>
-
-  </div>
-</div>
-  <!-- ACTIVITY -->
-<div id="activity" class="my-5">
-  
-  <div class="container-fluid">
-    <div class="row">
-      <div class="heading col-12 text-center">
-        <h1>Activity from Social Media</h1>
-    </div>
-  <div class="col-sm-6 col-lg-3 my-3">
-    <div class="card card-header">title</div>
-    <div class="card card-body py-5">body</div>
-  </div>
-  <div class="col-sm-6 col-lg-3 my-3">
-    <div class="card card-header">title</div>
-    <div class="card card-body py-5">body</div>
-  </div>
-  <div class="col-sm-6 col-lg-3 my-3">
-    <div class="card card-header">title</div>
-    <div class="card card-body py-5">body</div>
-  </div>
-  <div class="col-sm-6 col-lg-3 my-3">
-    <div class="card card-header">title</div>
-    <div class="card card-body py-5">body</div>
-  </div>
-</div>
-  </div>
-
-
-
-
-</div>
-<!-- COntact section -->
-<section id="contact">
-  <div class="container-fluid">
-    <div class="dark-overlay">
-    <div class="col p-5">
-      <a href="mailTo:matsuya@h01.itscom.net">
-            <i class="fas fa-envelope-open fa-3x"></i></a>
-          <h2 class="mt-3">Contact Me!</h1>
+      
     </div>
   </div>
-</div>
-</section>
-
 
     <!-- FOOTER -->
-    <footer id="main-footer" class="text-center p-4">
-        <div class="container">
+    <footer id="main-footer" class="text-center p-4 text-light">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col">
                     <p>Copyright &copy; <span id="year"></span> MyPortfolio</p>
@@ -648,6 +639,7 @@
             </div>
         </div>
     </footer>
+    
 
     <script src="js/countUp.js"></script>
 	<script src="js/countUp-jquery.js"></script>
@@ -662,62 +654,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
     <script src="https://unpkg.com/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+    
+    
     
     <script src="js/main.js"></script>
-    <script>
-        // Get the current year for the copyright
-        $('#year').text(new Date().getFullYear());
 
-
-
-        // auto collapse navbar
-        $('.navbar-nav>li>a').on('click', function () {
-            $('.navbar-collapse').collapse('hide');
-        });
-
-
-        $('.port-item').click(function () {
-        $('.collapse').collapse('hide');
-      });
-
-
-
-
-
-
-
-        /*init Scrollspy*/
-        $('body').scrollspy({
-            target: '#main-nav'
-        });
-
-
-        $(document).on('click', '[data-toggle="lightbox"]', function (e) {
-        e.preventDefault();
-        $(this).ekkoLightbox();
-      });
-
-
-
-        /*smooth scrolling*/
-        $('#main-nav a').on('click', function (event) {
-            if (this.hash !== '') {
-                event.preventDefault();
-                const hash = this.hash;
-                $('html,body').animate({
-                        scrollTop: $(hash).offset().top,
-                    },
-                    800,
-                    function () {
-                        window.location.hash = hash;
-                    }
-                );
-            }
-        });
-
-        
-        
-    </script>
 </body>
 
 </html>

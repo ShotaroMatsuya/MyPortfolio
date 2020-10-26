@@ -11,9 +11,64 @@ $(window).on("load",function(){
         }
     });
     
+    
 });
 
 $(document).ready(function(){
+            // Get the current year for the copyright
+            $('#year').text(new Date().getFullYear());
+
+
+
+            // auto collapse navbar
+            $('.navbar-nav>li>a').on('click', function () {
+                $('.navbar-collapse').collapse('hide');
+            });
+    
+    
+            $('.port-item').click(function () {
+            $('.collapse').collapse('hide');
+          });
+    
+    
+    
+    
+    
+    
+    
+            /*init Scrollspy*/
+            $('body').scrollspy({
+                target: '#main-nav'
+            });
+    
+    
+            $(document).on('click', '[data-toggle="lightbox"]', function (e) {
+            e.preventDefault();
+            $(this).ekkoLightbox();
+          });
+    
+    
+    
+            /*smooth scrolling*/
+            $('#main-nav a').on('click', function (event) {
+                if (this.hash !== '') {
+                    event.preventDefault();
+                    const hash = this.hash;
+                    $('html,body').animate({
+                            scrollTop: $(hash).offset().top,
+                        },
+                        800,
+                        function () {
+                            window.location.hash = hash;
+                        }
+                    );
+                }
+            });
+    
+            
+    
+            
+    
     //superslides
     $('#slides').superslides({
         animation:'slide',
@@ -27,6 +82,8 @@ $(document).ready(function(){
         startDelay:1000,
         showCursor:false
     });
+    getTweet();
+        
 
 
 
@@ -34,6 +91,8 @@ $(document).ready(function(){
     //scrollTop
     var statsTopOffset = $('.statsSection').offset().top;
     var countUpFinished = false;
+    // var latestTopOffset = $('#activity').offset().top;
+    // var fetchFinished = false;
     $(window).scroll(function () {
         if ($(this).scrollTop() > 5) {
             $("#main-nav").addClass("fixed-me navbar-dark bg-dark");
@@ -50,12 +109,75 @@ $(document).ready(function(){
 
 			countUpFinished = true;
 
-		}
-
-
+        }
+        
+        
+        
+        
 	});
     
+    function getTweet(){
+                fetch('http://localhost:3000/timeline/shotaro').then(res=>{
+                  
+                  return res.json();
+                }).then(data=>{
+                  console.log(data);
+                  output(data);
+                  return data;
 
+                }).then(res=>{
+                    $('.owl-carousel').owlCarousel({
+                        loop:false,
+                        items:6,
+                        nav : true,
+                        navText: ["<img src='img/prev1.png'>","<img src='img/next1.png'>"],
+                        
+                        responsive:{
+                            0:{
+                                items:1
+                            },
+                            480:{
+                                items:2
+                            },
+                            768:{
+                                items:3
+                            },
+                            938:{
+                                items:4
+                            }
+                        }   
+                       });      
+                }).catch(err=>{
+                  console.log(err);
+                });
+                
+              }
+              let html ="";
+              const tweetArea = document.querySelector('.tweets-area');
+              function output(data){
+                data.forEach(el => {
+                  html += `<aside class="tweet-card">
+                  <header>
+                  <span class="tw-logo"></span>
+                  <figure class="user-photo">
+                  <img src="img/duck.jpg" alt="">
+                  </figure>
+                  </header>
+                  
+                  <main>
+                  <h3>Shotaro</h3>
+                  <h5>@Shotaro59432703</h5>
+                  <div class="message">${el.text}</div>
+                  <small class="date">${new Date(el.created_at)}</small>
+                  </main>
+                  </aside>`;
+                  
+                });
+                tweetArea.innerHTML = html;
+            }
+            
+            
+            
     
     $("[data-fancybox]").fancybox();
     
@@ -75,9 +197,7 @@ $(document).ready(function(){
         });
         return false;
     });
-
-
-
+    
 
 
 

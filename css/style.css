@@ -49,7 +49,7 @@ body {
   height: 100%;
   position: absolute;
   z-index: 3;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .slides-navigation {
@@ -141,7 +141,7 @@ body {
   font-size: 56px;
   margin-bottom: 10px;
   font-weight: 400;
-  color: #3498db;
+  color: rgb(176, 242, 118);
 }
 .squareContent h3 {
   font-size: 13px;
@@ -169,8 +169,8 @@ body {
   padding: 5px;
 }
 .filter .current {
-  background-color: #3498db;
-  border-color: #3498db;
+  background-color: rgb(176, 242, 118);
+  border-color: rgb(176, 242, 118);
   color: #fff;
 }
 
@@ -221,7 +221,7 @@ body {
 .items a {
   width: 40px;
   height: 40px;
-  background-color: #3498db;
+  background-color: rgb(176, 242, 118);
   position: relative;
   display: inline-block;
   -webkit-transition: all 0.2s linear, 0.2s;
@@ -281,7 +281,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 #contact {
@@ -297,4 +297,119 @@ body {
 
 #contact a {
   color: #fff;
+}
+footer {
+  background-color: #5cc103;
+}
+.header-primary {
+  width: 100%;
+  min-height: 50px;
+  background-color: #dedede;
+  text-align: center;
+}
+.header-primary h1 {
+  font-size: 60px;
+  font-family: 'Abril Fatface', cursive;
+  padding: 15px 0;
+}
+
+.tweets-area {
+  /* width: 100%;
+  margin: 50px auto 0;
+  position: relative;
+  z-index: 1; */
+  background-color: rgb(196, 237, 160);
+
+  /* display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: start;
+
+  overflow-x: scroll; */
+}
+.owl-prev img,
+.owl-next img {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  margin-top: -20px;
+}
+.owl-prev img {
+  left: 30px;
+}
+.owl-next img {
+  right: 30px;
+}
+.tweet-card {
+  height: 350px;
+  max-width: 300px;
+  min-width: 250px;
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: scroll;
+  margin: 30px 10px;
+
+  flex-grow: 1;
+}
+.tweet-card header {
+  height: 60px;
+  background-color: #55acee;
+
+  position: relative;
+}
+
+.tweet-card .tw-logo {
+  width: 40px;
+  height: 40px;
+  background-image: url('https://image.flaticon.com/icons/svg/145/145812.svg');
+  border-radius: 100%;
+  position: absolute;
+  left: 30px;
+  top: 10px;
+}
+
+.tweet-card .user-photo {
+  width: 80px;
+  height: 80px;
+  background-color: purple;
+  border-radius: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 10px;
+  right: 30px;
+  box-shadow: 1px 2px 5px #000000;
+}
+.tweet-card .user-photo img {
+  max-width: 100%;
+}
+
+.tweet-card main {
+  padding: 20px;
+}
+
+.tweet-card h3 {
+  margin-bottom: 10px;
+  font-family: 'Francois One', sans-serif;
+}
+
+.tweet-card h5 {
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #7f7d7d;
+}
+
+.tweet-card p {
+  font-family: 'Vollkorn', serif;
+  line-height: 20px;
+}
+
+div.message {
+  white-space: pre-line;
+  font-size: 14px;
+  font-family: 'Vollkorn', serif;
+}
+.date {
+  font-size: 10px;
+  color: #7f7d7d;
 }
