@@ -136,13 +136,13 @@ $(document).ready(function(){
                             0:{
                                 items:1
                             },
-                            480:{
+                            520:{
                                 items:2
                             },
-                            768:{
+                            855:{
                                 items:3
                             },
-                            938:{
+                            1100:{
                                 items:4
                             }
                         }   
@@ -168,7 +168,7 @@ $(document).ready(function(){
                   <h3>Shotaro</h3>
                   <h5>@Shotaro59432703</h5>
                   <div class="message">${el.text}</div>
-                  <small class="date">${new Date(el.created_at)}</small>
+                  <small class="date">posted at :${new Date(el.created_at)}</small>
                   </main>
                   </aside>`;
                   

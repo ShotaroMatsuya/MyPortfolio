@@ -141,7 +141,7 @@ body {
   font-size: 56px;
   margin-bottom: 10px;
   font-weight: 400;
-  color: rgb(176, 242, 118);
+  color: #5cc103;
 }
 .squareContent h3 {
   font-size: 13px;
@@ -169,7 +169,7 @@ body {
   padding: 5px;
 }
 .filter .current {
-  background-color: rgb(176, 242, 118);
+  background-color: #5cc103;
   border-color: rgb(176, 242, 118);
   color: #fff;
 }
@@ -221,7 +221,7 @@ body {
 .items a {
   width: 40px;
   height: 40px;
-  background-color: rgb(176, 242, 118);
+  background-color: #5cc103;
   position: relative;
   display: inline-block;
   -webkit-transition: all 0.2s linear, 0.2s;
