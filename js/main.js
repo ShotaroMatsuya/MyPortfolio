@@ -144,7 +144,14 @@ $(document).ready(function(){
                             },
                             1100:{
                                 items:4
+                            },
+                            1500:{
+                                items:5
+                            },
+                            1800:{
+                                items:6
                             }
+                            
                         }   
                        });      
                 }).catch(err=>{
