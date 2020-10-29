@@ -117,7 +117,7 @@ $(document).ready(function(){
 	});
     
     function getTweet(){
-                fetch('http://localhost:3000/timeline/shotaro').then(res=>{
+                fetch('https://twitter-api-server-tester.herokuapp.com/timeline/shotaro').then(res=>{
                   
                   return res.json();
                 }).then(data=>{
