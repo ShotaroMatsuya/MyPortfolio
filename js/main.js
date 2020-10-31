@@ -35,19 +35,19 @@ $(document).ready(function(){
                     0:{
                         items:1
                     },
-                    520:{
+                    550:{
                         items:2
                     },
-                    855:{
+                    800:{
                         items:3
                     },
                     1100:{
                         items:4
                     },
-                    1500:{
+                    1400:{
                         items:5
                     },
-                    1800:{
+                    1600:{
                         items:6
                     }
                     

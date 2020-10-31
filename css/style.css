@@ -343,12 +343,12 @@ footer {
 }
 .tweet-card {
   height: 350px;
-  max-width: 300px;
-  min-width: 250px;
+  max-width: 270px;
+  min-width: 240px;
   background-color: #fff;
   border-radius: 12px;
   overflow: scroll;
-  margin: 30px 10px;
+  margin: 30px auto;
 
   flex-grow: 1;
 }
