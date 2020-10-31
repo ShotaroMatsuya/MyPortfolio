@@ -15,6 +15,70 @@ $(window).on("load",function(){
 });
 
 $(document).ready(function(){
+    function getTweet(){
+        fetch('https://twitter-api-server-tester.herokuapp.com/timeline/shotaro').then(res=>{
+          
+          return res.json();
+        }).then(data=>{
+          
+          output(data);
+          return data;
+
+        }).then(res=>{
+            $('.owl-carousel').owlCarousel({
+                loop:false,
+                items:6,
+                nav : true,
+                navText: ["<img src='img/prev1.png'>","<img src='img/next1.png'>"],
+                
+                responsive:{
+                    0:{
+                        items:1
+                    },
+                    520:{
+                        items:2
+                    },
+                    855:{
+                        items:3
+                    },
+                    1100:{
+                        items:4
+                    },
+                    1500:{
+                        items:5
+                    },
+                    1800:{
+                        items:6
+                    }
+                    
+                }   
+               });      
+        }).catch(err=>{
+          console.log(err);
+        });
+        
+      }
+      function getSpreadsheet()
+{
+    const countDis = document.getElementById('distance');
+    const countStep = document.getElementById('steps');
+fetch('https://script.google.com/macros/s/AKfycbxZBcaRh3K27U5lEuqkmEx3uD1g9gO2cP5W7YSGNa8BP6vOe8Q/exec').then(res=>{
+    return res.json();
+}).then(data=>{
+    const stats = data.data[0];
+    const distance = stats.distance;
+    const steps = stats.sumStep;
+    console.log(steps,distance);
+    countDis.innerHTML = distance;
+    countStep.innerHTML= steps;
+}).catch(err=>{
+    console.log(err);
+})
+
+}    
+getSpreadsheet();
+getTweet();
+
             // Get the current year for the copyright
             $('#year').text(new Date().getFullYear());
 
@@ -25,17 +89,10 @@ $(document).ready(function(){
                 $('.navbar-collapse').collapse('hide');
             });
     
-    
+            
             $('.port-item').click(function () {
             $('.collapse').collapse('hide');
           });
-    
-    
-    
-    
-    
-    
-    
             /*init Scrollspy*/
             $('body').scrollspy({
                 target: '#main-nav'
@@ -82,7 +139,6 @@ $(document).ready(function(){
         startDelay:1000,
         showCursor:false
     });
-    getTweet();
         
 
 
@@ -116,49 +172,7 @@ $(document).ready(function(){
         
 	});
     
-    function getTweet(){
-                fetch('https://twitter-api-server-tester.herokuapp.com/timeline/shotaro').then(res=>{
-                  
-                  return res.json();
-                }).then(data=>{
-                  console.log(data);
-                  output(data);
-                  return data;
-
-                }).then(res=>{
-                    $('.owl-carousel').owlCarousel({
-                        loop:false,
-                        items:6,
-                        nav : true,
-                        navText: ["<img src='img/prev1.png'>","<img src='img/next1.png'>"],
-                        
-                        responsive:{
-                            0:{
-                                items:1
-                            },
-                            520:{
-                                items:2
-                            },
-                            855:{
-                                items:3
-                            },
-                            1100:{
-                                items:4
-                            },
-                            1500:{
-                                items:5
-                            },
-                            1800:{
-                                items:6
-                            }
-                            
-                        }   
-                       });      
-                }).catch(err=>{
-                  console.log(err);
-                });
-                
-              }
+    
               let html ="";
               const tweetArea = document.querySelector('.tweets-area');
               function output(data){
